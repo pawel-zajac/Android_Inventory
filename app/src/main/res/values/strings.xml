@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Inventory</string>
+
+    <string name="product_name">Product name:</string>
+    <string name="unit_price">Unit price:</string>
+    <string name="currency_symbol">$</string>
+    <string name="available_quantity">Available quantity:</string>
+
+    <string name="sale_button">SALE!</string>
+
+    <string name="main_empty_view_title_text">Stock up!</string>
+    <string name="main_empty_view_subtitle_text">Add items to populate the list</string>
+
+    <string name="update_error_toast">Database was not updated correctly. Affected number of rows: </string>
+    <string name="main_item_sold_toast">1 item was sold</string>
+
+    <string name="details_hint_name">Product name</string>
+    <string name="details_hint_price">Unit price in cents</string>
+    <string name="details_hint_quantity">Available quantity</string>
+    <string name="details_hint_contact">Wholesaler\'s number</string>
+
+    <string name="details_add_item_title">Add a new item</string>
+    <string name="details_existing_item_title">Item details</string>
+    <string name="details_edit_item_title">Edit an item</string>
+
+    <string name="details_add_item_save_button">SAVE</string>
+    <string name="details_existing_item_update_button">UPDATE</string>
+    <string name="details_existing_item_contact_button">CONTACT WHOLESALER</string>
+    <string name="details_item_take_picture_button">TAKE A PICTURE</string>
+    <string name="details_item_choose_picture_button">CHOOSE A PICTURE</string>
+
+    <string name="details_item_no_changes">Edit your data before updating</string>
+
+    <string name="details_name_input_error">Enter the name</string>
+    <string name="details_price_input_error">Enter valid price</string>
+    <string name="details_quantity_input_error">Enter valid quantity</string>
+    <string name="details_contact_input_error">Enter the wholesaler\'s number</string>
+
+    <string name="details_invalid_fields_toast">Correct your input and try again</string>
+
+    <string name="main_save_item_success_toast">Item saved successfuly</string>
+    <string name="main_update_item_success_toast">Item updated successfuly</string>
+
+    <string name="main_something_wrong_toast">Oops! Something went wrong</string>
+
+    <string name="details_delete_dialog_msg">Are you sure you want to delete this item?</string>
+    <string name="details_delete_dialog_delete_option">Delete</string>
+    <string name="details_delete_dialog_cancel_option">Cancel</string>
+
+    <string name="main_delete_success_toast">Item was deleted</string>
+    <string name="main_delete_failure_toast">Item could not be deleted</string>
+
+    <string name="details_unsaved_changes_dialog_msg">Are you sure you want to discard unsaved changes?</string>
+    <string name="details_unsaved_changes_discard_option">Discard</string>
+    <string name="details_unsaved_changes_stay_option">Stay</string>
+
+</resources>

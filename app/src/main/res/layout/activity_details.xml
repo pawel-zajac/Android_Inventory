@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight"
+        android:orientation="vertical"
+        tools:context="com.example.android.inventory.DetailsActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="64dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <!-- ImageView wrapped in ConstraintLayout -->
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/details_item_image_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginHorizontal="70dp"
+                    android:background="@color/colorDivider"
+                    android:padding="6dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/details_item_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        app:layout_constraintDimensionRatio="1:1" />
+
+                </android.support.constraint.ConstraintLayout>
+
+                <!-- Name field -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/details_name_input_layout"
+                    style="@style/TextInputLayout">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/details_name_window"
+                        style="@style/TextInputEditText"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/details_hint_name"
+                        android:inputType="textCapSentences"
+                        android:maxLength="25" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Price field -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/details_price_input_layout"
+                    style="@style/TextInputLayout">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/details_price_window"
+                        style="@style/TextInputEditText"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/details_hint_price"
+                        android:inputType="number"
+                        android:maxLength="9" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <!-- Quantity controls -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/details_quantity_minus_button"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:src="@mipmap/baseline_remove_white_24"
+                    android:visibility="invisible" />
+
+                <!-- Quantity field -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/details_quantity_input_layout"
+                    style="@style/TextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_weight="1000">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/details_quantity_window"
+                        style="@style/TextInputEditText"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/details_hint_quantity"
+                        android:inputType="number"
+                        android:maxLength="9" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <ImageButton
+                    android:id="@+id/details_quantity_plus_button"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimaryDark"
+                    android:src="@mipmap/baseline_add_white_24"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="64dp"
+                android:orientation="vertical">
+
+                <!-- Contact field -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/details_contact_input_layout"
+                    style="@style/TextInputLayout"
+                    android:visibility="gone">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/details_contact_window"
+                        style="@style/TextInputEditText"
+                        android:hint="@string/details_hint_contact"
+                        android:inputType="number"
+                        android:maxLength="15" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- ImageView wrapped in LinearLayout -->
+                    <LinearLayout
+                        android:id="@+id/details_item_new_image_background"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        android:background="@color/colorDivider"
+                        android:padding="4dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/details_item_new_image"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/colorDivider"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/no_image"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/details_camera_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/details_item_take_picture_button"
+                            android:textColor="@android:color/white"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/details_gallery_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimaryDark"
+                            android:text="@string/details_item_choose_picture_button"
+                            android:textColor="@android:color/white"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="64dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/details_item_save_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/details_contact_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="@string/details_existing_item_contact_button"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- FAB -->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/details_item_edit_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="25dp"
+            android:src="@mipmap/baseline_edit_white_48"
+            android:visibility="gone"
+            app:backgroundTint="@color/colorPrimaryDark" />
+
+    </RelativeLayout>
+</ScrollView>
